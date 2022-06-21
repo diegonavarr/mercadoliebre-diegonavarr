@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;*/
+body {
+  background-color: #ebebeb;
+  min-width: 425px;
+  position: relative;
+}
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #eac926;
+  justify-content: center;
+  align-items: center;
+}
+#logo {
+  margin: 15px;
+  width: 45%;
+}
+
+#buscador {
+  display: flex;
+  width: 45%;
+  position: relative;
+}
+.topnav {
+  width: 100%;
+}
+input {
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px;
+}
+i.fa-solid.fa-magnifying-glass {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-menu {
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+i.fas.fa-bars {
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
+  background-color: #1259c3;
+  border-radius: 2vw;
+  font-size: 6vw;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+#banner {
+  width: 100%;
+  height: auto;
+}
+
+nav {
+  display: none;
+}
+
+p {
+  font-size: 12px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  color: #666;
+}
+
+.precio {
+  font-size: 18px;
+  width: 40%;
+}
+
+.descripcion {
+  font-size: 16px;
+  color: #666;
+  display: none;
+}
+.descuento {
+  font-size: 16px;
+  color: #39b54a;
+  width: 40%;
+}
+
+header .fa-solid {
+  font-size: 1em;
+}
+
+img#producto {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.articulo {
+  margin: 10px 0 10px 0;
+}
+.general {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: solid 1px #ebebeb;
+  background-color: white;
+  padding: 15px;
+  position: relative;
+  justify-content: space-evenly;
+}
+main {
+  width: 90%;
+  margin: auto;
+}
+
+#truck {
+  color: #39b54a;
+}
+
+i#truck.fa-solid.fa-truck {
+  color: #39b54a;
+  content: "\f0d1";
+  padding: 5px;
+  border: solid 1px;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  right: 20px;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+#blue {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  width: 100%px;
+}
+#blue #icon {
+  color: #1259c3;
+  font-size: 2em;
+}
+
+#blue p {
+  width: 90%;
+}
+
+/* MQ TABLET */
+@media (min-width: 768px) {
+  
+  header {
+    justify-content: space-evenly;
+    height: 130px;
+  }
+  #logo {
+    width: 30%;
+    max-height: 70px;
+  }
+  #buscador {
+    width: 30%;
+    max-height: 70px;
+  }
+  p.compra {
+    width: 30%;
+    max-height: 70px;
+  }
+  .burger-menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  ul {
+    display: flex;
+    text-decoration: none;
+    width: 380px;
+    justify-content: space-evenly;
+    margin: 5px;
+  }
+  li {
+    display: inline;
+    list-style-type: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .descripcion {
+    display: block;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 30px 0 30px 0;
+  }
+  section h2 {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+  .articulo {
+    width: 45%;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  footer {
+    align-items: center;
+  }
+
+}
+
+/* MQ DESKTOP */
+@media (min-width: 1024px) {
+  .articulo {
+    width: 20%;
+    box-shadow: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    max-width: 1100px;
+  }
+  p.copy {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+  }
+
+  .descripcion {
+    opacity: 0;
+  }
+  .articulo:hover .descripcion {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  .articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  i#truck.fa-solid.fa-truck:hover {
+    transform: rotate(-0.25turn);
+    transition-duration: 1s;
+  }
+  #blue #icon:hover{
+    color: brown;
+  }
+}
