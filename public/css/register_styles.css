@@ -80,7 +80,7 @@ main {
 footer {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
   justify-content: center;
   margin: auto;
   align-items: center;
@@ -172,3 +172,23 @@ margin: 20px 0 20px 0;
 #blue #icon:hover{
     color: brown;
   }
+
+  
+@media (min-width: 768px){
+
+  footer {
+    display: flex;
+    flex-wrap:wrap ;
+    flex-direction: row;
+    
+  }
+  #blue{
+    width: 25%;
+  }
+
+  p.copy{
+    width: 100%;
+  }
+
+
+}
